@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %} | Developer' info {% endblock %}
+{% load static %}
+
+{% block content %}
+
+<link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+<div>
+<div class="container mt-3 pt-5">
+    <div class="row">
+
+       <!-- Text -->
+        <div class="col-md-8">
+        <div class='abouttext  p'>
+            <p class='sspadding'>Hello, I am known by Muhammad Talha Khalid. I'm a software engineer with experience in c#, c++ and python.
+                    During my academia, I created a few websites in asp.net that created my passion for websites. 
+                    Right Now I am learning hard to be a full-stack engineer with gaining experience in Express JS, Node JS, MongoDB and React</p>
+                
+            <p class='sspadding'>My dream is to one day start my own business and become an entrepreneur. I have few ideas but as usual, they need financial assistance (working on that)</p>
+                
+            <p class='sspadding'>I'm constantly in quest of learning new things. Currently, those things include gaining more experience with MongoDB, React, Express JS, and Node JS. 
+                    Along with that, I am looking forward to a master degree in computer science(MSCS), as I enjoyed learning and developing basic projects in 
+                    machine learning and artificial intelligence</p>
+                
+            <p class='sspadding'>Right now I am working on the React website with all the content coming from the database. I had developed one long time ago with static but responsive content. However, this time I am bringing up games to the next level by making it as dynamic as I can </p>
+                
+            <p class='sspadding'>I had a terrible accident a few months ago that has crushed me to the core both physically and emotionally but 
+                    as older folk say these hardships are like hard reset to one's life by GOD.
+            </p>
+                
+            </div>
+        </div>
+        
+        <!-- pic-->
+        <div class="col-md-4 pt-4">
+            <img src="{% static 'img/about.png' %} " class="img-fluid"  alt="TJ PIC" />
+        </div>
+    </div>
+    </div>
+
+   
+
+
+    <!-- footer -->
+    <div class="text-center footer mt-5">
+         
+        <a href="https://talhakhalid.tk/" class="gl-ic mr-3" role="button"><i class="fas fa-2x fa-globe"  style="color:#1c1c1b "></i></a>
+        <a href="https://www.facebook.com/tjtalha" class="fb-ic mr-3" role="button"><i class="fab fa-2x fa-facebook-f"  style="color:#1c1c1b "></i></a>
+    <a href="https://twitter.com/tjtalhaa" class="tw-ic mr-3" role="button"><i class="fab fa-2x fa-twitter"  style="color:#1c1c1b "}}></i></a>
+    <a href="https://www.linkedin.com/in/tjtalha/" class="li-ic mr-3" role="button"><i class="fab fa-2x fa-linkedin-in"  style="color:#1c1c1b "}}></i></a>
+    <a href="https://www.instagram.com/talhamalic/" class="ins-ic mr-3" role="button"><i class="fab fa-2x fa-instagram"  style="color:#1c1c1b "}}></i></a>
+    <a href="https://github.com/tjtalhaa" class="git-ic mr-3" role="button"><i class="fab fa-2x fa-github" style="color:#1c1c1b "></i></a>
+
+
+     <div class="footer-copyright text-center py-3">© 2020 Copyright:
+     <a href="https://github.com/tjtalhaa"> Developed in Django</a>
+     </div>
+
+    </div> 
+</div>
+{% endblock %}
+
+
+ 

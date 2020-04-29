@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block title %} | Search {% endblock %}
+{% load static %}
+{% block content %}
+    <div class="mt-4">
+
+    {% if search.Response %}
+        <div class="jumbotron text-center hoverable pb-4 mt-10 ">
+            <div class="row" style="margin-bottom: 2px;">
+        
+           
+            <div class="col-md-4 offset-md-1 mx-3 my-3 ">
+        
+                <!-- Featured image -->
+                <div class="view overlay">
+                <img src="{% static 'img/dd.jpg' %}" class="img-fluid .zoom" alt="Sample image for first version of blog listing">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+                </div>
+             </div>
+           
+            <div class="col-md-7 text-md-left ml-3 mt-3 ">
+        
+            
+                <h4 class="alert alert-danger" role="alert"> SORRY! you search for a wrong crypto symbol</h4>
+                <h6>Search for symbols like... </h6><br/>
+                <p> Ethereum  <strong> (ETH)</strong> </p>
+                <p> Ripple  <strong> (XRP)</strong> </p>
+                <p> Litecoin  <strong>(LTC)</strong> </p>
+                <p> Cardano  <strong>(ADA )</strong> </p>
+                <p> EOS  <strong>(EOS)</strong> </p>
+                    
+            </div>
+          </div>
+        </div>
+    <!-- News jumbotron -->
+     {% else %}   
+        <div class="jumbotron text-center hoverable p-4 mt-10 ">
+        {% for key,value in search.DISPLAY.items %}
+        <!-- Grid row -->
+        <div class="row style="margin-bottom: 2px;">
+    
+        <!-- Grid column -->
+        <div class="col-md-4 offset-md-1 mx-3 my-3 ">
+    
+            <!-- Featured image -->
+            <div class="view overlay">
+            <img src="{% static 'img/dd.jpg' %}" class="img-fluid .zoom" alt="Sample image for first version of blog listing">
+            <a>
+                <div class="mask rgba-white-slight"></div>
+            </a>
+            </div>
+    
+        </div>
+        <!-- Grid column -->
+    
+        <!-- Grid column -->
+        <div class="col-md-7 text-md-left ml-3 mt-3 font-weight-normal" style="padding-top: 3px;">
+    
+        
+            <h4 class="h4 mb-4">{{ key }} ( {{ value.USD.FROMSYMBOL }} )</h4>
+    
+        
+            <strong >Price : </strong>    {{ value.USD.PRICE }} <br/>
+            <strong>High 24 : </strong>    {{ value.USD.HIGHDAY }} <br/>
+            <strong>Low 24 : </strong>    {{ value.USD.LOWDAY }} <br/>
+            <strong>Market :</strong>    {{ value.USD.MKTCAP }} <br/>
+    
+            <br/><br/>
+
+            <p><a><strong>Last Update :</strong></a>{{ value.USD.LASTUPDATE}}</p>
+    
+        </div>
+        <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row -->
+        {% endfor %}
+        </div>
+    <!-- News jumbotron -->
+    {% endif %}
+
+
+ <!-- footer -->
+ <div class="text-center footer ">
+    <a href="https://talhakhalid.tk/" class="gl-ic mr-3" role="button"><i class="fas fa-2x fa-globe"  style="color:#1c1c1b "></i></a>
+    <a href="https://www.facebook.com/tjtalha" class="fb-ic mr-3" role="button"><i class="fab fa-2x fa-facebook-f"  style="color:#1c1c1b "></i></a>
+    <a href="https://twitter.com/tjtalhaa" class="tw-ic mr-3" role="button"><i class="fab fa-2x fa-twitter"  style="color:#1c1c1b "}}></i></a>
+    <a href="https://www.linkedin.com/in/tjtalha/" class="li-ic mr-3" role="button"><i class="fab fa-2x fa-linkedin-in"  style="color:#1c1c1b "}}></i></a>
+    <a href="https://www.instagram.com/talhamalic/" class="ins-ic mr-3" role="button"><i class="fab fa-2x fa-instagram"  style="color:#1c1c1b "}}></i></a>
+    <a href="https://github.com/tjtalhaa" class="git-ic mr-3" role="button"><i class="fab fa-2x fa-github" style="color:#1c1c1b "></i></a>
+
+
+     <div class="footer-copyright text-center py-3">© 2020 Copyright:
+     <a href="https://github.com/tjtalhaa"> Developed in Django</a>
+     </div>
+
+    </div> 
+   
+</div>
+{% endblock %}
